@@ -35,7 +35,7 @@
                 event.preventDefault();
                 const hash = event.target.hash;
                 // deactivate existing active 'section'
-                document.querySelector(".section.active").classList.add(".hide");
+                document.querySelector(".section.active").classList.add("hide");
                 document.querySelector(".section.active").classList.remove("active");
                 // active new 'section';
                 document.querySelector(hash).classList.add("active");
@@ -87,6 +87,7 @@
 })();
 
 function bodyScrollingToggle() {
+    document.body.classList.toggle("stop-scrolling");
 }
 
 /* --------------- portfolio filter and popup ----------------- */
@@ -177,7 +178,6 @@ function bodyScrollingToggle() {
             popup.querySelector(".pp-loader").classList.remove("active");
         }
         let last_num = Number( screenshots.length);
-        last_num-1;
         popup.querySelector(".pp-counter").innerHTML = (slideIndex + 1 ) + " of " + last_num;
 
 
@@ -238,15 +238,15 @@ function bodyScrollingToggle() {
 
     function popupDetailsToggle(){
         if(projectDetailsContainer.classList.contains("active")){
-            projectDetailsBtn.querySelector("i").classList.remove("fa-minus");
-            projectDetailsBtn.querySelector("i").classList.add("fa-plus");
+            projectDetailsBtn.querySelector("").classList.remove("fa-minus");
+            projectDetailsBtn.querySelector("").classList.add("fa-plus");
 
             popup.querySelector(".pp-details").classList.remove("active");
             popup.querySelector(".pp-details").style.maxHeight = "0px";
         }
         else{
-            projectDetailsBtn.querySelector("i").classList.remove("fa-plus");
-            projectDetailsBtn.querySelector("i").classList.add("fa-minus");
+            projectDetailsBtn.querySelector("").classList.remove("fa-plus");
+            projectDetailsBtn.querySelector("").classList.add("fa-minus");
 
             projectDetailsContainer.style.maxHeight = projectDetailsContainer.scrollHeight + "px";
             popup.querySelector(".pp-details").classList.add("active");
