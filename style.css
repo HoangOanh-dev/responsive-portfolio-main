@@ -1470,4 +1470,9 @@ body > div.pp.portfolio-popup.open > div.pp-details.active > div > div.pp-title 
     padding: 0 15px;
 }
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 /***** End contact section *****/
